@@ -36,7 +36,7 @@ namespace OneCardSolution
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || comboBox1.Text == "" || comboBox2.Text == "")
+            if (textBox1.Text == "" || comboBox1.Text == "" || comboBox2.Text == ""||textBox2.Text=="")
             {
                 MessageBox.Show("不能为空！");
                 return;
@@ -70,7 +70,7 @@ namespace OneCardSolution
             string sql = string.Format("update yikatong set balance-={0} where card='{1}'", money, id);
             string sql4 = string.Format("select * from yhUser where card='{0}'", id);
             SqlCommand fu = new SqlCommand(sql);
-            int fuqian = Convert.ToInt32(fu.Rows[0]["balance"]);
+            int fuqian=0;
             if (fuqian <= 0)
             {
                 MessageBox.Show("您的余额不足！");
@@ -80,9 +80,9 @@ namespace OneCardSolution
             {
                 string sql2 = string.Format("select * from yhUser where card='{0}'", id);
                 SqlCommand cmd = new SqlCommand(sql2);
-                MessageBox.Show("卡号：" + id + "\r\n" + "您消费了" + money + "元" + "\r\n" + "您的余额为" + cmd.Rows[0]["balance"].ToString());
+                MessageBox.Show("卡号：" + id + "\r\n" + "您消费了" + money + "元" + "\r\n" + "您的余额为" + cmd.ToString());
 
-                string name = cmd.Rows[0]["name"].ToString();
+                string name = cmd.ToString();
 
                 string sql3 = string.Format("insert into licheng(name,PitStop,OutboundStation,consumption) values ('{0}','{1}','{2}',{3})", name, jin, chu, money);
                 DBHelper.ExecuteNonQuery(sql3);
@@ -105,6 +105,21 @@ namespace OneCardSolution
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void consumption_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
