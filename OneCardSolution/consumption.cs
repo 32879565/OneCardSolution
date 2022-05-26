@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 
 namespace OneCardSolution
@@ -64,12 +65,44 @@ namespace OneCardSolution
                     break;
                 }
             }
-         
+            int money = (cz - jz) * 2;
+            string id = this.textBox1.Text;
+            string sql = string.Format("update yikatong set balance-={0} where card='{1}'", money, id);
+            string sql4 = string.Format("select * from yhUser where card='{0}'", id);
+            SqlCommand fu = new SqlCommand(sql);
+            int fuqian = Convert.ToInt32(fu.Rows[0]["balance"]);
+            if (fuqian <= 0)
+            {
+                MessageBox.Show("您的余额不足！");
+                return;
+            }
+            if (DBHelper.ExecuteNonQuery(sql))
+            {
+                string sql2 = string.Format("select * from yhUser where card='{0}'", id);
+                SqlCommand cmd = new SqlCommand(sql2);
+                MessageBox.Show("卡号：" + id + "\r\n" + "您消费了" + money + "元" + "\r\n" + "您的余额为" + cmd.Rows[0]["balance"].ToString());
+
+                string name = cmd.Rows[0]["name"].ToString();
+
+                string sql3 = string.Format("insert into licheng(name,PitStop,OutboundStation,consumption) values ('{0}','{1}','{2}',{3})", name, jin, chu, money);
+                DBHelper.ExecuteNonQuery(sql3);
+            }
+
 
 
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

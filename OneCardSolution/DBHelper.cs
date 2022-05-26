@@ -10,7 +10,7 @@ namespace OneCardSolution
 {
     internal class DBHelper
     {
-        public static string ConnString = "server=.;database=haoche;uid =sa;pwd =1234";
+        public static string ConnString = "server=.;database=yikatong;uid =sa;pwd =1234";
         public static SqlConnection Conn = null;
         public static void InitConnection()
         {
