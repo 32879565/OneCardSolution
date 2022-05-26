@@ -43,17 +43,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(650, 105);
+            this.textBox1.Location = new System.Drawing.Point(731, 126);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 25);
+            this.textBox1.Size = new System.Drawing.Size(155, 28);
             this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(518, 111);
+            this.label1.Location = new System.Drawing.Point(583, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 15);
+            this.label1.Size = new System.Drawing.Size(134, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "输入用户卡号：";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -76,17 +77,18 @@
             "白苍岭",
             "火车站",
             "朝阳广场"});
-            this.comboBox1.Location = new System.Drawing.Point(650, 164);
+            this.comboBox1.Location = new System.Drawing.Point(731, 197);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 23);
+            this.comboBox1.Size = new System.Drawing.Size(155, 26);
             this.comboBox1.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(548, 172);
+            this.label2.Location = new System.Drawing.Point(616, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "进入站口：";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -94,9 +96,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(548, 220);
+            this.label3.Location = new System.Drawing.Point(616, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 15);
+            this.label3.Size = new System.Drawing.Size(98, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "出站站口：";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -118,17 +120,19 @@
             "白苍岭",
             "火车站",
             "朝阳广场"});
-            this.comboBox2.Location = new System.Drawing.Point(650, 217);
+            this.comboBox2.Location = new System.Drawing.Point(731, 260);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 23);
+            this.comboBox2.Size = new System.Drawing.Size(155, 26);
             this.comboBox2.TabIndex = 4;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(713, 305);
+            this.button1.Location = new System.Drawing.Point(802, 366);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(84, 28);
             this.button1.TabIndex = 6;
             this.button1.Text = "生成消费记录";
             this.button1.UseVisualStyleBackColor = true;
@@ -136,9 +140,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(555, 305);
+            this.button2.Location = new System.Drawing.Point(624, 366);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(84, 28);
             this.button2.TabIndex = 7;
             this.button2.Text = "清除数据";
             this.button2.UseVisualStyleBackColor = true;
@@ -147,18 +152,20 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-6, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(-7, 54);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(518, 332);
+            this.pictureBox1.Size = new System.Drawing.Size(583, 398);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // consumption
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(900, 540);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -168,6 +175,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "consumption";
             this.Text = "consumption";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
