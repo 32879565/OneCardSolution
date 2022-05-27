@@ -20,30 +20,29 @@ namespace OneCardSolution
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text == "" || textBox2.Text == "")
-            {
-                MessageBox.Show("用户名或密码不能为空！");
-                return;
-            }
-            string qqw = textBox1.Text;
-            string qqe = textBox2.Text;
-            string sql = $"select*from ID where id='{qqw}' and name='{qqe}'";
-            SqlDataReader resd = DBHelper.Getable(sql);
-            if (resd.HasRows)
+
+
+            string sql = "server =.; database = yikatong; uid = sa; pwd = 1234";
+            SqlConnection con = new SqlConnection(sql);
+            con.Open();
+            string id = textBox1.Text;
+            string mima = textBox2.Text;
+            string ID =String.Format("select * from ID where id='{0}'and mima='{1}'",id,mima);
+            SqlCommand dd = new SqlCommand(ID, con);
+            //string sql = "select id,mima from ID where AdminName='" + id + "' and mima= '" + mima + "'";
+            if (dd.ExecuteScalar()!= null)
             {
 
-                MessageBox.Show("登陆成功！");
-                consumption f= new consumption();
-                f.Show();
+                MessageBox.Show("登陆成功");
+                consumption c = new consumption();
+                c.Show();
                 this.Hide();
-                
             }
             else
             {
-                MessageBox.Show("请先注册！");
-            }
-
-
+                MessageBox.Show("请先注册");
+            } 
+           //con.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,6 +55,11 @@ namespace OneCardSolution
             Form2 form2 = new Form2();
             form2.Show();
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -42,7 +42,7 @@ namespace OneCardSolution
             SqlCommand cmd = new SqlCommand(sqlstr, Conn);
             int result = cmd.ExecuteNonQuery();
             Conn.Close();
-            return result > 0;
+            return result>0 ;
         }
         public static object ExecuteScalar(string sqlstr)
         {

@@ -24,7 +24,17 @@ namespace OneCardSolution
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string sql=string.Format("insert into ID valus()")
+            string sql = string.Format("insert into ID valus()");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
