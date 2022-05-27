@@ -40,7 +40,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +90,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(611, 183);
             this.label2.Name = "label2";
@@ -102,6 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(611, 251);
             this.label3.Name = "label3";
@@ -182,15 +183,6 @@
             this.textBox2.Size = new System.Drawing.Size(138, 25);
             this.textBox2.TabIndex = 10;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 393);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 15);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
-            // 
             // consumption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -199,7 +191,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
@@ -211,6 +202,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "consumption";
@@ -235,6 +227,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
     }
 }

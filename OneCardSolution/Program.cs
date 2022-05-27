@@ -16,7 +16,7 @@ namespace OneCardSolution
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new consumption());
+            Application.Run(new Form1());
         }
     }
 }
